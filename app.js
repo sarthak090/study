@@ -48,6 +48,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000,()=>console.log(`Server Is up and Running`))
+const PORT = process.env.PORT || 3000
+app.listen(PORT,()=>console.log(`Server Is up and Running`))
 
 module.exports = app;
