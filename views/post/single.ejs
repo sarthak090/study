@@ -1,0 +1,7 @@
+<%- include ../partials/header%>
+<div class="container">
+   <h1><%= post.title%></h1>
+   <h6><a href="/category/<%= post.category%>"><%= post.category%></a> </h6>
+   <div><%- post.content%></div>
+</div>
+<%- include ../partials/footer%>

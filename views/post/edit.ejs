@@ -1,0 +1,31 @@
+<%- include ../partials/header%>
+<div class="container">
+    <form method="POST" action="">
+        <input class="form-control form-control-lg" type="text" name="title" required value="<%= posts.title%>">
+        <br>
+        <select class="form-control" name="category" value="<%= posts.category[0]%>" id="exampleFormControlSelect1" required>
+            <option>english</option>
+            <option>business</option>
+            <option>accounts</option>
+            <option>monetary</option>
+            <option>management</option>
+            <option>marketing</option>
+          </select>
+          <br>
+        <textarea name="content"  required><%= posts.content%></textarea>
+        <br>
+
+        <input type="submit" id ="submit" class="btn btn-outline-success btn-lg btn-block" />
+    </form>
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+    <script>
+        const editor=  new FroalaEditor('textarea');
+        const btn = document.getElementById("submit")
+        btn.addEventListener("click",(evt)=>{
+            const title = document.getElementsByName()
+        })
+      </script>
+</div>
+<%- include ../partials/footer%>
